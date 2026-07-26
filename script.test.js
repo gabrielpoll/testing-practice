@@ -1,3 +1,5 @@
-test('2 mais 2 e 4', () => {
-    expect(2 + 2).toBe(4);
-})
+import capitalize from './script.js'
+
+test('capitalize something', () => {
+    expect(capitalize('hello')).toBe('Hello')
+});
