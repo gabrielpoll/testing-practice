@@ -12,4 +12,13 @@ function reverseString(str) {
     return str.split('').reverse().join('');
 }
 
-export {capitalize, reverseString}
+const calculator = {
+    add(a, b) {
+        return a + b
+    },
+    subtract: (a, b) => a - b,
+    divide: (a, b) => b !== 0 ? a / b : "Error",
+    multiply: (a, b) => a * b
+}
+
+export {capitalize, reverseString, calculator}
