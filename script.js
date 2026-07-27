@@ -1,6 +1,11 @@
 function capitalize(str) {
     if (!str) return "";
-    return str.charAt(0).toUpperCase() + str.slice(1);
+    const result = str
+    .toLowerCase()
+    .split(" ")
+    .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+    .join(" ")
+    return result;
 }
 
 function reverseString(str) {
