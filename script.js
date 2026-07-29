@@ -13,6 +13,9 @@ function reverseString(str) {
 }
 
 function returnShiftedLetter(letter, shift) {
+    if (!/[a-z]/i.test(letter)) {
+    return letter;
+}
     const upperLetter = letter === letter.toUpperCase();
     let isUpper = false;
     if (upperLetter) {
@@ -40,7 +43,7 @@ function returnShiftedLetter(letter, shift) {
             }
         }
     }
-    if (upperLetter) {
+    if (isUpper) {
         return shiftedLetter.toUpperCase();
     }
     return shiftedLetter;

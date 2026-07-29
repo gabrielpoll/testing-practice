@@ -19,5 +19,5 @@ test('take calculator object and test functions that execute basic operations', 
 test('takes a string and a shift factor and returns it with each character "shifted".', () => {
     expect(caesarCipher('xyz', 3)).toBe('abc')
     expect(caesarCipher('HeLLo', 3)).toBe('KhOOr')
-    //expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!')
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!')
 })
