@@ -58,8 +58,6 @@ function caesarCipher(string, shift) {
     return newString;
 }
 
-console.log(caesarCipher('hello', 3))
-
 const calculator = {
     add(a, b) {
         return a + b
@@ -69,4 +67,47 @@ const calculator = {
     multiply: (a, b) => a * b
 }
 
-export {capitalize, reverseString, calculator, caesarCipher}
+function analyzeArray(array) {
+    const len = array.length;
+    let sum = 0;
+    let min = 0;
+    let max = 0;
+
+    let obj = {
+        avarege: undefined,
+        min: undefined,
+        max: undefined,
+        length: len
+    }
+
+    for (let i = 0; i < len; i++) {
+        sum += array[i]
+    }
+    obj.avarege = sum / len;
+    
+    for (let i = 0; i < len; i ++) {
+        if (i === 0) {
+            min = array[0]
+        } else {
+            if (array[i] < min) {
+                min = array[i]
+            }
+        }
+    }
+    obj.min = min;
+
+    for (let i = 0; i < len; i++) {
+        if (i === 0) {
+            max = array[0]
+        } else {
+            if (array[i] > max) {
+                max = array[i]
+            }
+        }
+    }
+    obj.max = max;
+
+    return obj;
+};
+
+export {capitalize, reverseString, calculator, caesarCipher, analyzeArray}

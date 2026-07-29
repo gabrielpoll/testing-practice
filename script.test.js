@@ -1,4 +1,4 @@
-import {capitalize, reverseString, calculator, caesarCipher} from './script.js'
+import {capitalize, reverseString, calculator, caesarCipher, analyzeArray} from './script.js'
 
 
 test('capitalize something', () => {
@@ -21,3 +21,11 @@ test('takes a string and a shift factor and returns it with each character "shif
     expect(caesarCipher('HeLLo', 3)).toBe('KhOOr')
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!')
 })
+
+test('function that takes an array of numbers and returns an object with the following properties: average, min, max, and length', () => {
+    const analyzeArr = analyzeArray([1,8,3,4,2,6]);
+    expect(analyzeArr.avarege).toEqual(4)
+    expect(analyzeArr.min).toEqual(1);
+    expect(analyzeArr.max).toEqual(8);
+    expect(analyzeArr.length).toEqual(6)
+});
