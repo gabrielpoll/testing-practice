@@ -1,2 +1,2 @@
 # testing-practice
-Testing practice exercice
+A simple project created to practice unit testing with Jest. It includes a few basic JavaScript functions and their respective tests to get familiar with writing and running test cases.
